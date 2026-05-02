@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Github } from 'lucide-vue-next';
+import avatarImg from '@/src/assets/avator.jpg';
 
 const emit = defineEmits<{
   (e: 'navigate', id: string): void;
@@ -59,9 +60,9 @@ const emit = defineEmits<{
             class="absolute inset-0 rounded-2xl overflow-hidden glass-panel border border-white/10 z-10 transform rotate-3 transition-all duration-500 hover:rotate-1 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,157,92,0.2)]"
           >
             <img
-              src="https://images.unsplash.com/photo-1542831371-d531d36971e6?q=80&w=1470&auto=format&fit=crop"
-              alt="Developer setup"
-              class="w-full h-full object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700"
+              :src="avatarImg"
+              alt="个人开发者头像"
+              class="w-full h-full object-cover opacity-90 transition-all duration-700 hover:scale-105"
             />
           </div>
 

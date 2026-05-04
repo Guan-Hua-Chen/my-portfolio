@@ -20,6 +20,5 @@ export const backendSkills: string[] = ['Python', 'FastAPI', 'MySQL'];
 export const navSections: { id: string; label: string }[] = [
   { id: 'home', label: '首页' },
   { id: 'about', label: '关于我' },
-  { id: 'projects', label: '项目' },
-  { id: 'blog', label: '博客' },
+  { id: 'works', label: '作品' },
 ];

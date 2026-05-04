@@ -6,12 +6,8 @@ export interface Project {
   desc: string;
   icon: Component;
   tags: string[];
-}
-
-export interface Post {
-  date: string;
-  title: string;
-  readTime: string;
+  /** Preview images imported as URLs */
+  gallery?: string[];
 }
 
 export interface CursorDot {

@@ -13,7 +13,7 @@ const emit = defineEmits<{
     class="min-h-screen flex flex-col justify-center relative px-6 md:px-12 pt-20"
   >
     <div class="max-w-7xl mx-auto w-full flex flex-col md:flex-row gap-12 items-center">
-      <div class="flex-1 animate-fade-in-up md:text-left text-center z-10 w-full reveal-on-scroll">
+      <div class="shrink-0 md:flex-1 animate-fade-in-up md:text-left text-center z-10 w-full reveal-on-scroll">
         <span
           class="inline-block text-orange-400 font-semibold text-sm tracking-widest uppercase mb-4"
         >
@@ -31,10 +31,10 @@ const emit = defineEmits<{
         </p>
         <div class="flex items-center justify-center md:justify-start gap-6">
           <button
-            @click="emit('navigate', 'projects')"
+            @click="emit('navigate', 'works')"
             class="px-8 py-4 bg-orange-400 text-black font-bold uppercase text-xs tracking-widest hover:bg-orange-300 transition-all rounded-full hover:scale-105 active:scale-95 shadow-lg shadow-orange-500/20"
           >
-            查看作品集
+            查看作品
           </button>
           <div class="h-[1px] w-12 bg-white/20 hidden md:block transition-all hover:w-16"></div>
           <a
@@ -48,26 +48,30 @@ const emit = defineEmits<{
       </div>
 
       <div
-        class="flex-1 hidden md:flex justify-center items-center relative animate-fade-in-up"
+        class="flex w-full shrink-0 md:flex-1 justify-center items-center relative animate-fade-in-up mt-16 sm:mt-24 md:mt-0 pb-12 md:pb-0 px-4 md:px-0"
         style="animation-delay: 0.2s"
       >
-        <div class="relative w-[300px] h-[400px]">
+        <div
+          class="relative w-full max-w-[260px] sm:max-w-[280px] md:max-w-[300px] aspect-[3/4] min-h-[260px]"
+        >
           <div
             class="absolute inset-0 bg-gradient-to-tr from-orange-500/20 to-transparent rounded-[30px] -rotate-6 transform scale-105 blur-sm z-0 transition-transform duration-500 hover:rotate-[-8deg]"
           ></div>
 
+          <!-- 移动端 z 序提高，避免边角装饰压住主肖像 -->
           <div
-            class="absolute inset-0 rounded-2xl overflow-hidden glass-panel border border-white/10 z-10 transform rotate-3 transition-all duration-500 hover:rotate-1 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,157,92,0.2)]"
+            class="absolute inset-0 rounded-2xl overflow-hidden glass-panel border border-white/10 z-20 md:z-10 transform rotate-3 transition-all duration-500 hover:rotate-1 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,157,92,0.2)]"
           >
             <img
               :src="avatarImg"
               alt="个人开发者头像"
               class="w-full h-full object-cover opacity-90 transition-all duration-700 hover:scale-105"
+              decoding="async"
             />
           </div>
 
           <div
-            class="absolute -bottom-8 -left-12 w-40 h-40 rounded-2xl overflow-hidden glass-panel border border-white/10 z-20 transform -rotate-6 transition-all duration-500 hover:rotate-0 hover:scale-110 shadow-xl"
+            class="absolute -bottom-8 -left-12 w-40 h-40 rounded-2xl overflow-hidden glass-panel border border-white/10 z-10 md:z-20 pointer-events-none md:pointer-events-auto transform -rotate-6 transition-all duration-500 hover:rotate-0 hover:scale-110 shadow-xl"
           >
             <img
               src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1470&auto=format&fit=crop"
@@ -77,7 +81,7 @@ const emit = defineEmits<{
           </div>
 
           <div
-            class="absolute -top-6 -right-8 w-32 h-32 rounded-full overflow-hidden glass-panel border border-white/10 z-20 transform rotate-12 transition-all duration-500 hover:rotate-0 hover:scale-110 shadow-xl"
+            class="absolute -top-6 -right-8 w-32 h-32 rounded-full overflow-hidden glass-panel border border-white/10 z-10 md:z-20 pointer-events-none md:pointer-events-auto transform rotate-12 transition-all duration-500 hover:rotate-0 hover:scale-110 shadow-xl"
           >
             <img
               src="https://images.unsplash.com/photo-1627398246734-d8db5b8eb580?q=80&w=1470&auto=format&fit=crop"

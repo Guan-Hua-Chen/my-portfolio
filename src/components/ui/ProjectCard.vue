@@ -21,14 +21,37 @@ const formatIndex = (i: number) => `0${i + 1}`;
     ></div>
 
     <div
-      class="h-40 bg-gradient-to-br from-orange-500/10 group-hover:from-orange-500/20 to-transparent relative p-6 transition-all duration-500 z-10"
+      class="h-44 md:h-48 relative p-6 transition-all duration-500 z-10 overflow-hidden"
+      :class="
+        project.gallery?.length
+          ? ''
+          : 'bg-gradient-to-br from-orange-500/10 group-hover:from-orange-500/20 to-transparent'
+      "
     >
+      <template v-if="project.gallery?.length">
+        <div class="absolute inset-0 grid grid-cols-3 gap-px bg-white/10">
+          <img
+            v-for="(src, gi) in project.gallery"
+            :key="gi"
+            :src="src"
+            :alt="`${project.title} 预览 ${gi + 1}`"
+            class="w-full h-full object-cover object-top opacity-95 group-hover:opacity-100 transition-opacity"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/55 to-transparent pointer-events-none"
+        ></div>
+      </template>
       <div
-        class="absolute top-4 right-4 text-[10px] font-mono text-orange-400/70 group-hover:text-orange-400 transition-colors"
+        class="absolute top-4 right-4 text-[10px] font-mono text-orange-400/70 group-hover:text-orange-400 transition-colors z-20"
       >
-        项目 // {{ formatIndex(index) }}
+        作品 // {{ formatIndex(index) }}
       </div>
-      <div class="mt-auto absolute bottom-6 left-6 transform transition-transform group-hover:translate-x-2">
+      <div
+        class="mt-auto absolute bottom-6 left-6 right-6 transform transition-transform group-hover:translate-x-2 z-20"
+      >
         <h3 class="text-2xl font-serif italic">{{ project.title }}</h3>
         <p class="text-xs font-bold tracking-widest text-[#f4f1ea] opacity-50 uppercase mt-1">
           {{ project.type }}

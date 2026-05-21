@@ -49,7 +49,6 @@ const emit = defineEmits<{
 
       <div
         class="flex w-full shrink-0 md:flex-1 justify-center items-center relative animate-fade-in-up mt-16 sm:mt-24 md:mt-0 pb-12 md:pb-0 px-4 md:px-0"
-        style="animation-delay: 0.2s"
       >
         <div
           class="relative w-full max-w-[260px] sm:max-w-[280px] md:max-w-[300px] aspect-[3/4] min-h-[260px]"
@@ -74,7 +73,7 @@ const emit = defineEmits<{
             class="absolute -bottom-8 -left-12 w-40 h-40 rounded-2xl overflow-hidden glass-panel border border-white/10 z-10 md:z-20 pointer-events-none md:pointer-events-auto transform -rotate-6 transition-all duration-500 hover:rotate-0 hover:scale-110 shadow-xl"
           >
             <img
-              src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1470&auto=format&fit=crop"
+              src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=400&auto=format&fit=crop"
               alt="Code"
               class="w-full h-full object-cover opacity-80"
             />
@@ -84,7 +83,7 @@ const emit = defineEmits<{
             class="absolute -top-6 -right-8 w-32 h-32 rounded-full overflow-hidden glass-panel border border-white/10 z-10 md:z-20 pointer-events-none md:pointer-events-auto transform rotate-12 transition-all duration-500 hover:rotate-0 hover:scale-110 shadow-xl"
           >
             <img
-              src="https://images.unsplash.com/photo-1627398246734-d8db5b8eb580?q=80&w=1470&auto=format&fit=crop"
+              src="https://images.unsplash.com/photo-1627398246734-d8db5b8eb580?q=80&w=400&auto=format&fit=crop"
               alt="Hardware"
               class="w-full h-full object-cover opacity-80"
             />

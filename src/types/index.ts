@@ -8,6 +8,7 @@ export interface Project {
   tags: string[];
   /** Preview images imported as URLs */
   gallery?: string[];
+  link?: string;
 }
 
 export interface CursorDot {

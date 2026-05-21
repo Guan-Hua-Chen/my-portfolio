@@ -50,7 +50,7 @@ useTagCloud({
       </div>
 
       <div
-        class="relative h-[400px] md:h-[600px] rounded-2xl overflow-hidden glass-panel flex items-center justify-center group flex-col text-center px-6 reveal-on-scroll delay-200"
+        class="relative h-[400px] md:h-[600px] rounded-2xl overflow-hidden glass-panel flex items-center justify-center group flex-col text-center px-6 reveal-on-scroll"
       >
         <div
           class="absolute inset-0 bg-gradient-to-tr from-orange-400/5 to-transparent z-0 transition-opacity duration-500 group-hover:opacity-75"

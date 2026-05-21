@@ -21,4 +21,5 @@ export const navSections: { id: string; label: string }[] = [
   { id: 'home', label: '首页' },
   { id: 'about', label: '关于我' },
   { id: 'works', label: '作品集' },
+  { id: 'games', label: '小游戏' },
 ];

@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import type { Project } from '../../types';
+import { useRouter } from 'vue-router';
 
-defineProps<{
+const props = defineProps<{
   project: Project;
   index: number;
 }>();
@@ -9,12 +10,21 @@ defineProps<{
 const currentYear = new Date().getFullYear();
 
 const formatIndex = (i: number) => `0${i + 1}`;
+
+const router = useRouter();
+
+const handleClick = () => {
+  if (props.project.link) {
+    router.push(props.project.link);
+  }
+};
 </script>
 
 <template>
   <div
     class="glass-panel group cursor-pointer relative overflow-hidden rounded-2xl flex flex-col h-full reveal-on-scroll"
     :style="`transition-delay: ${index * 150}ms`"
+    @click="handleClick"
   >
     <div
       class="absolute inset-0 bg-gradient-to-b from-transparent to-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"

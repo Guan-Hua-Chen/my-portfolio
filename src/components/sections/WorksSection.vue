@@ -10,7 +10,7 @@ import ProjectCard from '../ui/ProjectCard.vue';
         class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 reveal-on-scroll"
       >
         <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold italic text-orange-200">
-          精选作品
+          作品集
         </h2>
         <button
           class="px-6 py-2 bg-transparent text-white font-bold uppercase text-[10px] tracking-widest hover:bg-white/5 hover:scale-105 active:scale-95 border border-white/10 transition-all rounded-full hidden md:block"

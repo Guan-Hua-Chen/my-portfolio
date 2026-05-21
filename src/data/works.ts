@@ -7,16 +7,16 @@ import demo1_3 from '../assets/demo1_3.png';
 
 export const works: Project[] = [
   {
-    title: '个人博客系统',
+    title: '个人网站',
     type: '前端展示',
-    desc: '一个基于 Vue 3 的个人博客系统。提供美观的文章展示、流畅的交互体验和自适应布局。',
+    desc: '一个基于 Vue 3 的个人网站。提供美观的文章展示、流畅的交互体验和自适应布局。',
     icon: MonitorSmartphone,
     tags: ['Vue 3', 'JavaScript', 'HTML5', 'Tailwind'],
   },
   {
-    title: 'AI代码助手',
+    title: 'AI聊天对话助手',
     type: 'AI应用',
-    desc: '基于大语言模型的智能代码助手。帮助开发者更快地编写和调试代码。',
+    desc: '基于大语言模型的智聊天助手。',
     icon: Terminal,
     tags: ['Vue 3', 'JavaScript', 'LLM API'],
   },

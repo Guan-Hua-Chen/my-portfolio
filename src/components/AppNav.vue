@@ -47,6 +47,14 @@ const onNavigate = (id: string) => emit('navigate', id);
       >
         {{ section.label }}
       </button>
+      <a
+        href="https://github.com/Guan-Hua-Chen/MyNotes"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:opacity-100 transition-all hover:-translate-y-0.5 pb-1"
+      >
+        笔记
+      </a>
     </div>
   </nav>
 </template>

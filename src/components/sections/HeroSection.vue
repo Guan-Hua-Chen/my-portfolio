@@ -38,7 +38,7 @@ const emit = defineEmits<{
           </button>
           <div class="h-[1px] w-12 bg-white/20 hidden md:block transition-all hover:w-16"></div>
           <a
-            href="https://github.com"
+            href="https://github.com/Guan-Hua-Chen"
             target="_blank"
             class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center opacity-60 hover:opacity-100 hover:scale-110 hover:border-orange-400 hover:text-orange-400 transition-all"
           >
